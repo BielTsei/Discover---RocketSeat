@@ -44,7 +44,8 @@ body * {
 
 #container {
   /*border: 2px red solid;*/ /*veja na prática*/
-  width: 360px; /*largura da seção principal da página*/
+  width: 100%; /*largura da seção principal da página*/
+  max-width: 580px;
   padding: 0px 24px;
   /*height: 712px;*/ /*altura da seçao principal da página*/
   /*margin: auto;*/ /*alinha uma 'caixa' de tamanho fixo no centro, é possivel especificar para o lado direito e esquerdo*/
