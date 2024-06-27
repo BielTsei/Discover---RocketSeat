@@ -22,7 +22,7 @@
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.2);
-  --hightligh-color: rgba(0, 0, 0, 0.01);
+  --hightligh-color: rgba(0, 0, 0, 0.085);
   --switch-bg-url: url(/assets/sun.svg);
 }
 
@@ -84,10 +84,15 @@ body * {
   border-radius: 50%;
 
   position: absolute;
-  right: 0;
+  left: 0;
   top: 50%;
   z-index: 1;
   transform: translateY(-50%);
+  animation: slide-back 0.2s;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--hightligh-color);
 }
 
 #switch span {
@@ -102,8 +107,7 @@ body * {
 }
 
 .light #switch button {
-  left: 0;
-  right: initial;
+  animation: slide-in 0.2s forwards;
 }
 
 /* ------------- Links -----------------*/
@@ -116,7 +120,6 @@ ul {
 }
 
 ul li a {
-  border: 1px solid red;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -172,5 +175,25 @@ footer {
 
   .light {
     --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+/*key frames */
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
