@@ -31,7 +31,7 @@ body {
   background-repeat: no-repeat; /* retira a repetição da imagem */
   background-position: top center; /*posiciona a imagem no centro */
   background-size: cover; /* ajusta o tamanho da imagem para o tamanho da tela, vai cobrir todo o espaço visível. */
-
+  height: 100vh;
   /* versão resumida da função background
    -------------------shorhand -------------------*/
   /*background: url(./assets/bg-mobile.jpg) no-repeat top center/cover; */
@@ -163,4 +163,14 @@ footer {
   padding: 24px 0px;
   text-align: center;
   font-size: 14px;
+}
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
